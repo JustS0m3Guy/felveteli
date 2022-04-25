@@ -1,11 +1,14 @@
 from multiprocessing import context
 from django.shortcuts import render
+from .models import Student
 
 def index(request):
     template="index.html"
     context={}
     if request.method=="POST":
-        if('studentid' == '11111111111'):
+        diakok = list(Student.objects.filter(student_id=request.POST['studentid']))
+
+        if(len(diakok) == 1):
             template="results.html"
         else:
             print("Helytelen azonosító!")

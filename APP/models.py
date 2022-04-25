@@ -2,7 +2,7 @@ from pyexpat import model
 from django.db import models
 
 # Create your models here.
-class student(models.Model):
+class Student(models.Model):
     class Meta:
 
         verbose_name = 'student'
@@ -16,6 +16,7 @@ class student(models.Model):
     math_accetpance = models.BooleanField()
     it_accetpance = models.BooleanField()
     english_accetpance = models.BooleanField()
+    italian_acceptance = models.BooleanField()
     
     def __str__(self):
         return f"{self.student_name}, {self.student_id}"
