@@ -2,23 +2,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{% static 'css/style.css' %}"
+        />
         <script src="{% static 'js/script.js' %}"></script>
         <title>Szent László Gimnázium</title>
     </head>
     <body>
         <div class="maindiv">
             <h1>Szent László Gimnázium felvételi eredmények</h1>
-            <div>
-                Írja be a diákazonosítóját!
-            </div>
+            <div>Írja be a diákazonosítóját!</div>
             <form method="POST">
                 {% csrf_token %}
-                <input type="text" maxlength="11" name="studentid">
-                <button type="submit" class="sumbutton">Submit</button>    
+                <input type="text" maxlength="11" name="studentid" />
+                <button type="submit" class="sumbutton">Submit</button>
             </form>
         </div>
     </body>
