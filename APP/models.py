@@ -11,12 +11,6 @@ class Student(models.Model):
     student_name = models.CharField(max_length=255)
     student_id = models.CharField(max_length=255)
     student_points = models.FloatField()
-    #faculties
-    english_accetpance = models.BooleanField()
-    math_accetpance = models.BooleanField()
-    it_accetpance = models.BooleanField()
-    english_accetpance = models.BooleanField()
-    italian_acceptance = models.BooleanField()
     
     def __str__(self):
         return f"{self.student_name}, {self.student_id}"

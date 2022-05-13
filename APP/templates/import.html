@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Input</title>
+    </head>
+    <body>
+        <div>
+            <p>Itt lehet az adatbázist feltölteni, pl.:</p>
+            <p>diákneve;diákID;pontokszáma;</p>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="input_data">
+                <button type="submit" class="sumbutton">Submit</button>
+            </form>
+
+            {% if possible_states == 0 %}
+
+            <div class="feedback"></div>
+
+            {% endif %}
+
+            {% if possible_states == 1 %}
+
+            <div class="feedback">Sikeresen feltöltve!</div>
+            
+            {% endif %}
+
+            {% if possible_states == 2 %}
+
+            <div class="feedback">Hibás formátumba próbálta feltölteni az adatokat!</div>
+
+            {% endif %}
+            
+        </div>
+    </body>
+</html>

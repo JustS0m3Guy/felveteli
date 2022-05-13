@@ -19,11 +19,14 @@ from django.urls import path
 
 from APP.views import index
 from APP.views import results
+from APP.views import import_data
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', index),
 
-    path('results', results)
+    path('results', results),
+
+    path('import', import_data)
 ]
