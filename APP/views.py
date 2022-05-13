@@ -8,11 +8,11 @@ def index(request):
     context={}
     if request.method=="POST":
         diakok = list(Student.objects.filter(student_id=request.POST['studentid']))
-
-        if(len(diakok) == 11):
+        print(len(diakok))
+        if(len(diakok) == 1):
             template="results.html"
         else:
-            print("Helytelen azonosító!")
+            context={'incorrect' : len(diakok) != 1}
     return render(request, template, context)
 
 def results(request):
@@ -31,7 +31,6 @@ def import_data(request):
     possible_states = 0
     if request.method=="POST":
         import_data = list(request.POST['input_data'].split(';'))
-        print(import_data)
         if(len(import_data) == 3):
             Student.objects.create(student_name = import_data[0],student_id = import_data[1],student_points = import_data[2])
             possible_states+=1

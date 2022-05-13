@@ -22,6 +22,16 @@
                 <input type="text" maxlength="11" name="studentid" />
                 <button type="submit" class="sumbutton">Submit</button>
             </form>
+
+            {% if incorrect %}
+
+            <div>Helytelen azonosító!</div>
+
+            {% else %}
+
+            <div></div>
+
+            {% endif %}
         </div>
     </body>
 </html>
