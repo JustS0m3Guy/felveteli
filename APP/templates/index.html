@@ -15,11 +15,16 @@
     </head>
     <body>
         <div class="maindiv">
-            <h1>Szent László Gimnázium felvételi eredmények</h1>
-            <div>Írja be a diákazonosítóját!</div>
+            <h1 class="header">Szent László Gimnázium felvételi eredmények</h1>
+            <div class="textdiv">Írja be a diákazonosítóját!</div>
             <form method="POST">
                 {% csrf_token %}
-                <input type="text" maxlength="11" name="studentid" />
+                <input
+                    class="typing_box"
+                    type="text"
+                    maxlength="11"
+                    name="studentid"
+                />
                 <button type="submit" class="sumbutton">Submit</button>
             </form>
 
@@ -29,7 +34,7 @@
 
             {% else %}
 
-            <div></div>
+            <div class="textdiv"></div>
 
             {% endif %}
         </div>

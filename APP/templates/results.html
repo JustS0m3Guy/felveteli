@@ -14,6 +14,34 @@
         <title>Szent László Gimnázium eredmények</title>
     </head>
     <body>
-        <div>kabe</div>
+        <div class="flex">
+            <div class="keret">
+                <div class="Cím">{{studentname}} eredményei:</div>
+                <div class="textdiv">{{studentpoints}} pontot ért el</div>
+                <ul>
+                    {% if english %}
+                    <li class="green">Felvették angolra!</li>
+                    {% else %}
+                    <li class="red">Nem vették fel angolra!</li>
+                    {% endif %} {% if math %}
+                    <li class="green">Felvették matekra!</li>
+                    {% else %}
+                    <li class="red">Nem vették fel matekra!</li>
+                    {% endif %} {% if it %}
+                    <li class="green">Felvették infóra!</li>
+                    {% else %}
+                    <li class="red">Nem vették fel infóra!</li>
+                    {% endif %} {% if italian %}
+                    <li class="green">Felvették olaszra!</li>
+                    {% else %}
+                    <li class="red">Nem vették fel olaszra!</li>
+                    {% endif %} {% if bioligy %}
+                    <li class="green">Felvették bioszra!</li>
+                    {% else %}
+                    <li class="red">Nem vették fel bioszra!</li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
     </body>
 </html>

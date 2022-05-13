@@ -1,9 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{% static 'css/style.css' %}"
+        />
         <title>Input</title>
     </head>
     <body>
@@ -12,7 +18,7 @@
             <p>diákneve;diákID;pontokszáma</p>
             <form method="POST">
                 {% csrf_token %}
-                <input type="text" name="input_data" />
+                <input class="typing_box_2" type="text" name="input_data" />
                 <button type="submit" class="sumbutton">Submit</button>
             </form>
 

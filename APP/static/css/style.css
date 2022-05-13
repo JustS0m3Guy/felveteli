@@ -1,10 +1,61 @@
-body{
+body {
     background-color: cornflowerblue;
 }
-.maindiv{
-    text-align:center;
+.maindiv {
+    text-align: center;
 }
 
-h1{
-    margin-bottom: 25%;
+.header {
+    margin-bottom: 20%;
+    font-size: 50px;
+}
+
+.textdiv {
+    font-size: 30px;
+}
+
+.typing_box {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.typing_box_2 {
+    width: 1500px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    padding-top: 250px;
+}
+.keret {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 750px;
+    border: 3px solid darkblue;
+    background-color: #ecfffc;
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 20px;
+}
+.Cím {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: arial;
+    text-align: center;
+}
+
+.green {
+    color: green;
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
 }
